@@ -4,7 +4,7 @@ public class account {
 	int id = 0;
 	double balance = 0;
 	double annualInterestRate = 0;
-	private Date dateCreated;
+	private Date dateCreated = new Date();
 
 	account() {		
 	}
@@ -38,25 +38,29 @@ public class account {
 		double newAnnualInterestRate = annualInterestRate;
 	}
 
-	public Date getdateCreated() {
-		return dateCreated;
+	String getdateCreated() {
+		return dateCreated.toString();
 	}
 
 	double getMonthlyInterestRate() {
-		return (annualInterestRate / 12) / 100;
+		return (annualInterestRate / 100) / 12;
 	}
 
 	double getMothlyInterest() {
 		return balance * getMonthlyInterestRate();
 	}
 	double withdraw(double amount) {
-	
+
 		return balance -= amount;
 
 	}
 	double deposit(double amount) {
-		
+
 		return balance += amount;
+	}
+	public String toString() {
+		return "Type: Generic account;  ID: " + this.id 
+				+ ";  balance: " + this.balance;
 	}
 }
 
