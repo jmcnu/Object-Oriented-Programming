@@ -1,7 +1,8 @@
 /*
- Author:Jan McNulty
- Date:7/13/22
+ Author: Jan McNulty
+ Date:7/27/22
  */
+
 public abstract class GeometricObject {
 	private String color;
 	private boolean filled;
@@ -39,5 +40,4 @@ public abstract class GeometricObject {
 	public abstract double getArea();
 	
 	public abstract double getPerimeter();
-
 }
